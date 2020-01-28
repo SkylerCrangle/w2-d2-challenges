@@ -2,6 +2,13 @@
 
 function largerNum(num1, num2) {
     // you code here
+    if (num1 > num2) {
+        return num1;
+    } else if (num2 > num1) {
+        return num2;
+    } else {
+        return "neither number is larger"
+    }
 
 }
 
@@ -14,6 +21,22 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
+    let ratio = score / possible;
+    if (ratio >= .9) {
+        return "A";
+    }
+    else if (ratio >= .8) {
+        return "B";
+    }
+    else if (ratio >= .7) {
+        return "C";
+    }
+    else if (ratio >= .6) {
+        return "D";
+    }
+    else if (ratio < .6) {
+        return "F";
+    }
 
 }
 
@@ -29,12 +52,33 @@ function testGrader(score, possible) {
 //Make sure your ranges are inclusive
 
 function timeOfDayGreeting(hour) {
+    if (hour >= 22 && hour <= 24 || 1 <= hour <= 4) {
+        return "good night";
+    }
+    else if (hour >= 12 && hour <= 17) {
+        return "good afternoon";
+    }
+    else if (hour <= 11 && hour >= 5) {
+        return "good morning";
+    }
+    else if (hour <= 21 && hour >= 18) {
+        return "good evening";
+    }
     // you code below
 
 }
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
+    if (temp <= 98.6) {
+        return "no fever";
+    }
+    else if (temp >= 103) {
+        return "fever go to hospital";
+    }
+    else if (temp > 98.6) {
+        return "fever";
+    }
 
 }
 
@@ -47,6 +91,11 @@ let myCar = {
 }
 
 function isStopped(car) {
+    if (!car.moving) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
@@ -58,5 +107,9 @@ let dish = {
 }
 
 function washDish(dish) {
-
+    if (dish.yourDish && dish.isDirty) {
+        return true;
+    } else {
+        return false;
+    }
 }

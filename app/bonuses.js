@@ -2,5 +2,9 @@
 let str = "team number 2"
 
 function camelCase(str) {
+  let arr = [];
+  for (let i = 0; i < str.length; i++) {
+
+  }
 
 }
